@@ -1,0 +1,42 @@
+<div ng-hide="showResult" style="width: 500px;margin: auto">
+    <h1 style="text-align: center;font-weight: 100">Github Finder</h1>
+    <md-card style="padding: 10px">
+        <form name="githubFinder">
+            <md-input-container class="md-block">
+                <label>Github user name</label>
+                <input type="text" name="userName" ng-model="github.userName" required>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>User repo name</label>
+                <input type="text" name="repoName" ng-model="github.repoName" required>
+            </md-input-container>
+            <div style="text-align: center">
+                <md-button class="md-raised md-primary" ng-click="finder()">Find</md-button>
+            </div>
+            <p style="text-align: center;font-size: 11px">For Ex: userName: robin850 & repoName: carrierwave-dropbox</p>
+        </form>
+    </md-card>
+</div>
+<div ng-show="showResult">
+    <md-card style="padding: 10px">
+        <div layout="row">
+            <div flex="30">
+                <img ng-src="{{details.basic.avatar_url}}">
+            </div>
+            <div flex="40" style="padding: 20px;line-height: 50px;">
+                <div><span class="head1">Name : </span><span class="head2">{{details.basic.name}}</span></div>
+                <div><span class="head1">User Name : </span><span class="head2"> {{details.basic.login}}</span></div>
+                <div><span class="head1">Number of followers : </span><span class="head2">{{details.basic.followers}}</span></div>
+                <div><span class="head1">Number of closed Issues : </span><span class="head2">{{details.issues.length}}</span></div>
+            </div>
+            <div flex style="padding: 20px;">
+                <div>List of users whose issue is closed</div>
+                <div style="padding: 10px 0 0 30px">
+                    <div ng-repeat="issues in details.issues">
+                        <p class="head2">{{issues.user.login}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </md-card>
+</div>

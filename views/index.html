@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <title>MobiStreak Assignment</title>
+    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        text {
+            font: 10px sans-serif;
+        }
+    </style>
+</head>
+<body ng-cloak>
+<div ng-controller="AppCtrl">
+    <md-content style="box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28)">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>
+                    <span class="logo" style="font-size: larger; font-weight: 600; color: #3ad0df;" ng-click="go('/')">Mobi<span
+                            style="color: #fff;">Streak</span></span>
+                </h2>
+            </div>
+        </md-toolbar>
+    </md-content>
+</div>
+
+<div ng-view></div>
+
+<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="/bower_components/angular/angular.js"></script>
+<script src="/bower_components/angular-route/angular-route.min.js"></script>
+<script src="/bower_components/angular-animate/angular-animate.js"></script>
+<script src="/bower_components/angular-aria/angular-aria.js"></script>
+<script src="/bower_components/angular-material/angular-material.js"></script>
+<script src="/controller/firstAssign.js"></script>
+<script src="/controller/secondAssign.js"></script>
+<script src="/controller/thirdAssign.js"></script>
+<script src="/controller/home.js"></script>
+<script src="/myApp.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+<div>
+    <section style="">
+        <md-card style="padding: 10px;background: #fff;position: absolute">
+            <div id="graph"></div>
+        </md-card>
+    </section>
+    <section>
+        <md-card style="position: fixed;right:24px;padding: 18px;background: #fff">
+            <div ng-repeat="data in objectKeys">
+                <div style="color: #1E1E1E;text-align: center;padding: 5px 0;cursor: pointer" ng-click="showGraph(data)">{{data | uppercase}}</div>
+            </div>
+        </md-card>
+    </section>
+</div>

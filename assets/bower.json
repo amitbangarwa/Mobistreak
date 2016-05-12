@@ -1,0 +1,13 @@
+{
+  "name": "public",
+  "homepage": "https://github.com/healthist/ht",
+  "authors": [
+    "Amit Bangarwa"
+  ],
+  "description": "",
+  "dependencies": {
+    "angular-route": "~1.5.5",
+    "angular": "~1.5.5",
+    "angular-material": "~1.0.8"
+  }
+}
